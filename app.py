@@ -275,6 +275,87 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+/* =========================================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .block-container {
+        padding-top: 1rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .main-title {
+        font-size: 30px !important;
+        line-height: 1.2 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .subtitle {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 15px !important;
+    }
+
+    .section-title {
+        font-size: 22px !important;
+        line-height: 1.3 !important;
+        margin-top: 8px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .question-card {
+        padding: 12px 14px !important;
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 8px !important;
+    }
+
+    .selected-question-box {
+        padding: 12px 14px !important;
+    }
+
+    .selected-question-title {
+        font-size: 14px !important;
+    }
+
+    .selected-question-text {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+    .final-feedback-box {
+        padding: 14px !important;
+        font-size: 14px !important;
+    }
+
+    .progress-text {
+        font-size: 13px !important;
+    }
+
+    .footer {
+        font-size: 11px !important;
+        margin-top: 20px !important;
+        padding: 10px !important;
+    }
+
+    /* Make buttons easier to tap */
+    .stButton > button {
+        width: 100% !important;
+        min-height: 45px !important;
+        font-size: 14px !important;
+    }
+
+    /* Make text areas comfortable on phones */
+    textarea {
+        font-size: 15px !important;
+    }
+
+}
+
 
 # =========================================================
 # GUIDE LABEL
