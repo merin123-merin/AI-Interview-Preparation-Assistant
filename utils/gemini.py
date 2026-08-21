@@ -1,4 +1,5 @@
 import os
+import streamlit as st
 from dotenv import load_dotenv
 from google import genai
 
@@ -6,11 +7,17 @@ load_dotenv()
 
 API_KEY = os.getenv("GEMINI_API_KEY")
 
+# If running on Streamlit Cloud, get the key from Streamlit Secrets
 if not API_KEY:
-    raise ValueError("GEMINI_API_KEY is not set in the .env file.")
+    try:
+        API_KEY = st.secrets["GEMINI_API_KEY"]
+    except Exception:
+        API_KEY = None
+
+if not API_KEY:
+    raise ValueError("GEMINI_API_KEY is not configured.")
 
 client = genai.Client(api_key=API_KEY)
-
 
 def generate_interview_questions(
     job_role,
